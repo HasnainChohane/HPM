@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediCare - Modern Hospital</title>
+  <link rel="stylesheet" href="hpm.css" />
+</head>
+
+<body>
+  <!-- Canvas background -->
+  <canvas id="network"></canvas>
+
+  <!-- Main Content Wrapper -->
+  <div class="main">
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="icon">
+        <h2 class="logo">MediCare</h2>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="departmet.html">Departments</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="search">
+        <input class="srche" type="search" placeholder="Search doctors, departments..." />
+        <a href="#"><button class="btn">Search</button></a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="content" id="home">
+      <h1>Your Health is Our <br /><span>Priority</span></h1>
+      <p class="par">
+        At MediCare Hospital, we provide state-of-the-art medical care, emergency services, and patient-focused treatment.<br />
+        Our expert team of doctors and nurses ensure you receive the best healthcare solutions tailored to your needs.
+      </p>
+      <button class="cn"><a href="book.html">Book Appointment</a></button>
+
+      <!-- Login Form -->
+      <div class="form">
+        <h2>Patient Login</h2>
+        <input type="email" placeholder="Enter your email" />
+        <input type="password" placeholder="Enter your password" />
+        <button class="btnn"><a href="#">Login</a></button>
+        <p class="link">
+          Don't have an account?<br /><a href="#">Register here</a>
+        </p>
+        <p class="liw">Or log in with</p>
+        <div class="logo">
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Scripts -->
+  <script src="hpm.js"></script>
+  <script src="script-blue.js"></script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

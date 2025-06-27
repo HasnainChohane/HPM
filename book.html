@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Doctors – MediCare Hospital</title>
+  <link rel="stylesheet" href="depart.css" />
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js" defer></script>
+  <style>
+    body {
+      background: #001d3d;
+      color: #eef4fb;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #5dd4ff;
+      margin: 40px 0 20px;
+    }
+    .doctors-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 20px 40px;
+    }
+    .doctor-card {
+      background: #002952;
+      padding: 20px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .doctor-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+    .doctor-card h3 {
+      margin: 10px 0 5px;
+      color: #5dd4ff;
+    }
+    .doctor-card p {
+      margin: 4px 0;
+      font-size: 0.95rem;
+      color: #c3d8f7;
+    }
+    .btn {
+      margin-top: 12px;
+      padding: 10px 18px;
+      border: none;
+      background: #5dd4ff;
+      color: #001d3d;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+    .btn:hover {
+      background: #00bfff;
+    }
+
+    /* Modal styles */
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+    }
+    .modal.show { display: grid; }
+
+    .modal-box {
+      background: rgba(0, 32, 63, 0.95);
+      border-radius: 16px;
+      padding: 30px 24px;
+      width: 92%;
+      max-width: 420px;
+      color: #eef4fb;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+    .modal-box h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #5dd4ff;
+    }
+    .doc-name {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      color: #b9d4f1;
+    }
+    .modal-box label {
+      display: block;
+      margin-bottom: 16px;
+      font-size: 0.9rem;
+    }
+    .modal-box input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background: transparent;
+      border: 1px solid #5dd4ff;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 14px;
+    }
+    .modal-box input::placeholder {
+      color: #b9d4f1;
+    }
+    .close-btn {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 26px;
+      color: #5dd4ff;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .close-btn:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="section-title">Our Doctors</h1>
+
+  <div class="doctors-container">
+    <div class="doctor-card">
+      <img src="img/doctors/1.jpg" alt="Dr. Ali Khan">
+      <h3>Dr. Ali Khan</h3>
+      <p>MBBS, FCPS (Cardiology)</p>
+      <p>Cardiology Department</p>
+      <button class="btn btn-appoint">Book Appointment</button>
+    </div>
+    <div class="doctor-card">
+      <img src="img/doctors/2.jpg" alt="Dr. Fatima Ahmed">
+      <h3>Dr. Fatima Ahmed</h3>
+      <p>MBBS, DCH (Pediatrics)</p>
+      <p>Pediatrics Department</p>
+      <button class="btn btn-appoint">Book Appointment</button>
+    </div>
+    <div class="doctor-card">
+      <img src="img/doctors/3.jpg" alt="Dr. Usman Riaz">
+      <h3>Dr. Usman Riaz</h3>
+      <p>MBBS, FCPS (Neonatology)</p>
+      <p>NICU Specialist</p>
+      <button class="btn btn-appoint">Book Appointment</button>
+    </div>
+    <div class="doctor-card">
+      <img src="img/doctors/4.jpg" alt="Dr. Sana Malik">
+      <h3>Dr. Sana Malik</h3>
+      <p>MSc Child Psychology</p>
+      <p>Child Therapy Unit</p>
+      <button class="btn btn-appoint">Book Appointment</button>
+    </div>
+    <div class="doctor-card">
+      <img src="img/doctors/5.jpg" alt="Dr. Imran Bashir">
+      <h3>Dr. Imran Bashir</h3>
+      <p>MBBS, FCPS (Intervention)</p>
+      <p>Cath Lab</p>
+      <button class="btn btn-appoint">Book Appointment</button>
+    </div>
+    <div class="doctor-card">
+      <img src="img/doctors/6.jpg" alt="Dr. Hina Saeed">
+      <h3>Dr. Hina Saeed</h3>
+      <p>MBBS, FCPS (Cardiology)</p>
+      <p>Heart Failure Unit</p>
+      <button class="btn btn-appoint">Book Appointment</button>
+    </div>
+    <div class="doctor-card">
+      <img src="img/doctors/7.jpg" alt="Dr. Zahid Mahmood">
+      <h3>Dr. Zahid Mahmood</h3>
+      <p>MBBS, FCPS (Internal Medicine)</p>
+      <p>General Ward</p>
+      <button class="btn btn-appoint">Book Appointment</button>
+    </div>
+    <div class="doctor-card">
+      <img src="img/doctors/8.jpg" alt="Dr. Asma Yousaf">
+      <h3>Dr. Asma Yousaf</h3>
+      <p>MBBS, FCPS (Emergency)</p>
+      <p>Emergency Department</p>
+      <button class="btn btn-appoint">Book Appointment</button>
+    </div>
+    <div class="doctor-card">
+      <img src="img/doctors/9.jpg" alt="Dr. Adnan Qureshi">
+      <h3>Dr. Adnan Qureshi</h3>
+      <p>MBBS, FCPS (Nephrology)</p>
+      <p>Kidney Unit</p>
+      <button class="btn btn-appoint">Book Appointment</button>
+    </div>
+    <div class="doctor-card">
+      <img src="img/doctors/10.jpg" alt="Dr. Rabia Noor">
+      <h3>Dr. Rabia Noor</h3>
+      <p>BDS, MDS (Oral Surgery)</p>
+      <p>Dental Department</p>
+      <button class="btn btn-appoint">Book Appointment</button>
+    </div>
+  </div>
+
+  <!-- ▸ Appointment Modal -->
+  <div id="appointment-modal" class="modal">
+    <div class="modal-box">
+      <button class="close-btn" aria-label="Close Modal">&times;</button>
+      <h2>Book an Appointment</h2>
+      <p class="doc-name">with <span id="doctor-name">Doctor Name</span></p>
+
+      <form id="appoint-form">
+        <label>
+          Full Name
+          <input type="text" name="patient" placeholder="Enter your name" required>
+        </label>
+        <label>
+          Phone Number
+          <input type="tel" name="phone" placeholder="+92XXXXXXXXXX" required pattern="^\+?\d{10,15}$">
+        </label>
+        <label>
+          Preferred Date
+          <input type="date" name="date" required>
+        </label>
+        <label>
+          Preferred Time
+          <input type="time" name="time" required>
+        </label>
+        <input type="hidden" name="doctor" id="doctor-field">
+        <button type="submit" class="btn">Confirm Appointment</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ▸ Script -->
+  <script>
+    document.querySelectorAll(".btn-appoint").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const card = btn.closest(".doctor-card");
+        const docName = card.querySelector("h3")?.textContent || "Doctor";
+        document.getElementById("doctor-name").textContent = docName;
+        document.getElementById("doctor-field").value = docName;
+        document.getElementById("appointment-modal").classList.add("show");
+      });
+    });
+
+    const closeModal = () => {
+      document.getElementById("appointment-modal").classList.remove("show");
+      document.getElementById("appoint-form").reset();
+    };
+
+    document.querySelector(".close-btn").onclick = closeModal;
+    document.getElementById("appointment-modal").onclick = (e) => {
+      if (e.target.id === "appointment-modal") closeModal();
+    };
+
+    document.getElementById("appoint-form").onsubmit = (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.patient.value.trim();
+      const phone = form.phone.value.trim();
+      const date = form.date.value;
+      const time = form.time.value;
+      if (!name || !phone || !date || !time) {
+        alert("Please fill all fields.");
+        return;
+      }
+      alert(`✅ Appointment booked with ${form.doctor.value} on ${date} at ${time}`);
+      closeModal();
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us – MediCare Hospital</title>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="departmet.css" />
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js" defer></script>
+
+  <style>
+    .contact-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      color: #eef4fb;
+    }
+
+    .contact-form,
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      border: none;
+      background: #06244d;
+      color: #eef4fb;
+      font-size: 15px;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #b9d4f1;
+    }
+
+    .contact-form button {
+      background: #5dd4ff;
+      color: #00203f;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: transparent;
+      color: #5dd4ff;
+      border: 1px solid #5dd4ff;
+    }
+
+    .contact-info h3 {
+      margin-top: 20px;
+      margin-bottom: 8px;
+      color: #5dd4ff;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 250px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ▸ Navigation -->
+  <nav class="navbar">
+    <div class="logo">MediCare</div>
+    <div class="menu">
+      <ul>
+        <li><a href="hpm.html">Home</a></li>
+        <li><a href="departmet.html">Departments</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="book.html">Appointment</a></li>
+        <li><a href="contact.html" style="color: #5dd4ff;">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ▸ Hero -->
+  <section class="department-hero">
+    <div class="overlay">
+      <h1>Contact Us</h1>
+      <p>We’re here to assist you. Feel free to reach out with your questions or feedback.</p>
+    </div>
+  </section>
+
+  <!-- ▸ Contact Section -->
+  <section class="contact-container">
+    
+    <!-- Left: Contact Form -->
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+      <form action="mailto:contact@medicarehospital.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="subject" placeholder="Subject" />
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Right: Hospital Info -->
+    <div class="contact-info">
+      <h2>Reach Us</h2>
+      <h3>Address</h3>
+      <p>123 MediCare

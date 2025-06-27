@@ -1,0 +1,181 @@
+/* ─────────────────────────────────────────────
+   MediCare Hospital – depart.css
+   Dark-blue theme for one-page Departments layout
+   ─────────────────────────────────────────── */
+
+/* 1. Global Reset & Base Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #eef4fb;
+  background: #001933;
+  scroll-behavior: smooth;
+}
+
+/* 2. Navigation Bar */
+.navbar {
+  position: sticky;         /* sticks to top while scrolling */
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(0, 19, 51, 0.9); /* semi-transparent */
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 72px;
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: 600;
+  color: #5dd4ff;
+  flex-shrink: 0;
+}
+
+.menu {
+  flex: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: #eef4fb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #5dd4ff;
+}
+
+/* 3. Generic Section Spacing */
+section {
+  scroll-margin-top: 80px;   /* ensures anchors aren’t hidden behind navbar */
+}
+
+/* 4. About Section (class="content") */
+.content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 90px 20px 60px;
+}
+
+.content h1 {
+  font-size: 52px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.content h1 span,
+.content h2 {
+  color: #5dd4ff;
+}
+
+.par {
+  margin-top: 16px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* 5. Department Hero Banner */
+.department-hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 45vh;
+  text-align: center;
+  padding: 20px 10px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 34, 77, 0.7) 0%,
+      rgba(0, 19, 51, 0.9) 100%
+    ),
+    var(--hero-img, url("images\ \(5\).jpg")) center/cover no-repeat;
+}
+
+.department-hero .overlay {
+  max-width: 800px;
+}
+
+.department-hero h1 {
+  font-size: 40px;
+  margin-bottom: 12px;
+  color: #5dd4ff;
+}
+
+/* 6. Department Details & Sub-Departments */
+.department-details,
+.sub-department {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.department-details h2,
+.sub-department h2 {
+  font-size: 28px;
+  color: #5dd4ff;
+  margin-bottom: 12px;
+}
+
+.service-list,
+.sub-department ul {
+  list-style: disc inside;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* 7. Lists inside “About” Core Values (reuse .par for spacing) */
+ul.par {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+/* 8. Responsive Tweaks */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px 16px;
+  }
+
+  .menu ul {
+    gap: 24px;
+  }
+
+  .content h1 {
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .department-hero h1 {
+    font-size: 32px;
+  }
+
+  .department-details,
+  .sub-department {
+    margin: 40px auto;
+  }
+}

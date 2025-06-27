@@ -1,0 +1,195 @@
+/* ───── Global Reset ───── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #eef4fb;
+  background: #001933;
+  overflow-x: hidden;
+}
+
+canvas#network {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  display: block;
+}
+
+/* ───── Main Section ───── */
+.main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 15, 38, 0.95) 0%,
+    rgba(0, 34, 77, 0.95) 50%,
+    rgba(0, 15, 38, 0.95) 100%
+  );
+  backdrop-filter: blur(2px);
+  padding-bottom: 50px;
+}
+
+/* ───── Navbar ───── */
+.navbar {
+  max-width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 600;
+  color: #f01313;
+  user-select: none;
+}
+
+.menu {
+  flex: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  color: #eef4fb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #5dd4ff;
+}
+
+/* ───── Search Box ───── */
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.srche {
+  width: 220px;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #5dd4ff;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  background: transparent;
+  color: #eef4fb;
+  font-size: 15px;
+}
+
+.srche::placeholder {
+  color: #b9d4f1;
+}
+
+.btn {
+  height: 42px;
+  padding: 0 18px;
+  border: 1px solid #5dd4ff;
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  background: #5dd4ff;
+  color: #00203f;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #5dd4ff;
+}
+
+/* ───── Content / Headings ───── */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 40px;
+  position: relative;
+}
+
+.content h1 {
+  font-size: 52px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.content h1 span {
+  color: #5dd4ff;
+}
+
+.content h2 {
+  color: #5dd4ff;
+  margin-top: 30px;
+  font-size: 26px;
+}
+
+.par {
+  margin-top: 16px;
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 900px;
+  color: #eef4fb;
+}
+
+ul {
+  padding-left: 40px;
+  line-height: 1.8;
+}
+
+ul li {
+  font-size: 1rem;
+  color: #eef4fb;
+}
+
+/* ───── Responsive ───── */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu ul {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .form {
+    position: static;
+    margin: 50px auto 0;
+  }
+
+  .content h1 {
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .par {
+    text-align: center;
+    margin: 20px auto;
+  }
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Doctors – MediCare Hospital</title>
+
+  <link rel="stylesheet" href="depart.css" />
+  <a href="book.html">Book Appointment</a>
+
+  <style>
+    body {
+      background-color: #001933;
+      color: #eef4fb;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .doctors-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .doctors-section h1 {
+      font-size: 42px;
+      text-align: center;
+      color: #5dd4ff;
+      margin-bottom: 40px;
+    }
+
+    .doctor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .doctor-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+    }
+
+    .doctor-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid #5dd4ff;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .doctor-card h3 {
+      margin: 0;
+      font-size: 20px;
+      color: #ffffff;
+    }
+
+    .doctor-card p {
+      margin: 5px 0;
+      color: #b9d4f1;
+    }
+
+    .doctor-card .dept {
+      font-weight: 600;
+      color: #5dd4ff;
+    }
+
+    .doctor-card .btn-appoint {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: #5dd4ff;
+      color: #00203f;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .doctor-card .btn-appoint:hover {
+      background: transparent;
+      border: 1px solid #5dd4ff;
+      color: #5dd4ff;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="doctors-section">
+    <h1>Meet Our Doctors</h1>
+
+    <div class="doctor-grid">
+
+      <!-- Doctor 1 -->
+      <div class="doctor-card">
+        <img src="img/doctors/doc1.jpg" alt="Dr. Ayesha Khan">
+        <h3>Dr. Ayesha Khan</h3>
+        <p>MBBS, FCPS (Pediatrics)</p>
+        <p class="dept">Pediatrics</p>
+        <a href="#book.html" class="btn-appoint">Book Appointment</a>
+      </div>
+
+      <!-- Doctor 2 -->
+      <div class="doctor-card">
+        <img src="img/doctors/doc2.jpg" alt="Dr. Sameer Ali">
+        <h3>Dr. Sameer Ali</h3>
+        <p>MBBS, MRCP (UK)</p>
+        <p class="dept">Cardiology</p>
+        <a href="book.html" class="btn-appoint">Book Appointment</a>
+      </div>
+
+      <!-- Doctor 3 -->
+      <div class="doctor-card">
+        <img src="img/doctors/doc3.jpg" alt="Dr. Sara Malik">
+        <h3>Dr. Sara Malik</h3>
+        <p>MBBS, FCPS (Neurology)</p>
+        <p class="dept">Neurology</p>
+        <a href="#" class="btn-appoint">Book Appointment</a>
+      </div>
+
+      <!-- Doctor 4 -->
+      <div class="doctor-card">
+        <img src="img/doctors/doc4.jpg" alt="Dr. Fahad Zaman">
+        <h3>Dr. Fahad Zaman</h3>
+        <p>MBBS, FCPS (Surgery)</p>
+        <p class="dept">General Surgery</p>
+        <a href="#" class="btn-appoint">Book Appointment</a>
+      </div>
+
+      <!-- Doctor 5 -->
+      <div class="doctor-card">
+        <img src="img/doctors/doc5.jpg" alt="Dr. Noor Fatima">
+        <h3>Dr. Noor Fatima</h3>
+        <p>MBBS, FCPS (Gynecology)</p>
+        <p class="dept">Gynecology</p>
+        <a href="#" class="btn-appoint">Book Appointment</a>
+      </div>
+
+      <!-- Doctor 6 -->
+      <div class="doctor-card">
+        <img src="img/doctors/doc6.jpg" alt="Dr. Kamran Aziz">
+        <h3>Dr. Kamran Aziz</h3>
+        <p>MBBS, FCPS (Orthopedics)</p>
+        <p class="dept">Orthopedics</p>
+        <a href="#" class="btn-appoint">Book Appointment</a>
+      </div>
+
+      <!-- Doctor 7 -->
+      <div class="doctor-card">
+        <img src="img/doctors/doc7.jpg" alt="Dr. Huma Tariq">
+        <h3>Dr. Huma Tariq</h3>
+        <p>MBBS, FCPS (Dermatology)</p>
+        <p class="dept">Skin & Laser</p>
+        <a href="#" class="btn-appoint">Book Appointment</a>
+      </div>
+
+      <!-- Doctor 8 -->
+      <div class="doctor-card">
+        <img src="img/doctors/doc8.jpg" alt="Dr. Ahmed Raza">
+        <h3>Dr. Ahmed Raza</h3>
+        <p>MBBS, FCPS (ENT)</p>
+        <p class="dept">ENT</p>
+        <a href="#" class="btn-appoint">Book Appointment</a>
+      </div>
+
+      <!-- Doctor 9 -->
+      <div class="doctor-card">
+        <img src="img/doctors/doc9.jpg" alt="Dr. Mahira Sheikh">
+        <h3>Dr. Mahira Sheikh</h3>
+        <p>MBBS, DCH (UK)</p>
+        <p class="dept">Child Therapy</p>
+        <a href="#" class="btn-appoint">Book Appointment</a>
+      </div>
+
+      <!-- Doctor 10 -->
+      <div class="doctor-card">
+        <img src="img/doctors/doc10.jpg" alt="Dr. Usman Bashir">
+        <h3>Dr. Usman Bashir</h3>
+        <p>MBBS, FCPS (Cardiac Surgery)</p>
+        <p class="dept">Cath Lab</p>
+        <a href="#" class="btn-appoint">Book Appointment</a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
