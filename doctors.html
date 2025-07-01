@@ -85,6 +85,84 @@
       border: 1px solid #5dd4ff;
       color: #5dd4ff;
     }
+    .btn {
+      margin-top: 12px;
+      padding: 10px 18px;
+      border: none;
+      background: #5dd4ff;
+      color: #001d3d;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+    .btn:hover {
+      background: #00bfff;
+    }
+
+    /* Modal styles */
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+    }
+    .modal.show { display: grid; }
+
+    .modal-box {
+      background: rgba(0, 32, 63, 0.95);
+      border-radius: 16px;
+      padding: 30px 24px;
+      width: 92%;
+      max-width: 420px;
+      color: #eef4fb;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+    .modal-box h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #5dd4ff;
+    }
+    .doc-name {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      color: #b9d4f1;
+    }
+    .modal-box label {
+      display: block;
+      margin-bottom: 16px;
+      font-size: 0.9rem;
+    }
+    .modal-box input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background: transparent;
+      border: 1px solid #5dd4ff;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 14px;
+    }
+    .modal-box input::placeholder {
+      color: #b9d4f1;
+    }
+    .close-btn {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 26px;
+      color: #5dd4ff;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .close-btn:hover {
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -96,8 +174,8 @@
 
       <!-- Doctor 1 -->
       <div class="doctor-card">
-        <img src="img/doctors/doc1.jpg" alt="Dr. Ayesha Khan">
-        <h3>Dr. Ayesha Khan</h3>
+        <img src="hasnain.jpeg" alt="Dr. Hanain Chohan">
+        <h3>Dr. Hasnain Chohan</h3>
         <p>MBBS, FCPS (Pediatrics)</p>
         <p class="dept">Pediatrics</p>
         <a href="#book.html" class="btn-appoint">Book Appointment</a>
@@ -105,8 +183,8 @@
 
       <!-- Doctor 2 -->
       <div class="doctor-card">
-        <img src="img/doctors/doc2.jpg" alt="Dr. Sameer Ali">
-        <h3>Dr. Sameer Ali</h3>
+        <img src="faizan.jpeg" alt="Dr. Muhammad Fizan">
+        <h3>Dr. Muhammad Faizan</h3>
         <p>MBBS, MRCP (UK)</p>
         <p class="dept">Cardiology</p>
         <a href="book.html" class="btn-appoint">Book Appointment</a>
@@ -114,8 +192,8 @@
 
       <!-- Doctor 3 -->
       <div class="doctor-card">
-        <img src="img/doctors/doc3.jpg" alt="Dr. Sara Malik">
-        <h3>Dr. Sara Malik</h3>
+        <img src="Sumama.jpeg" alt="Dr. Sumama wasti">
+        <h3>Dr. Sayed Sumama Wasti</h3>
         <p>MBBS, FCPS (Neurology)</p>
         <p class="dept">Neurology</p>
         <a href="#" class="btn-appoint">Book Appointment</a>
@@ -123,8 +201,8 @@
 
       <!-- Doctor 4 -->
       <div class="doctor-card">
-        <img src="img/doctors/doc4.jpg" alt="Dr. Fahad Zaman">
-        <h3>Dr. Fahad Zaman</h3>
+        <img src="images (5).jpg" alt="Dr. Ayesha Khan">
+        <h3>Dr. Ayesha Khan</h3>
         <p>MBBS, FCPS (Surgery)</p>
         <p class="dept">General Surgery</p>
         <a href="#" class="btn-appoint">Book Appointment</a>
@@ -132,7 +210,7 @@
 
       <!-- Doctor 5 -->
       <div class="doctor-card">
-        <img src="img/doctors/doc5.jpg" alt="Dr. Noor Fatima">
+        <img src="images (2).jpg" alt="Dr. Noor Fatima">
         <h3>Dr. Noor Fatima</h3>
         <p>MBBS, FCPS (Gynecology)</p>
         <p class="dept">Gynecology</p>
@@ -141,8 +219,8 @@
 
       <!-- Doctor 6 -->
       <div class="doctor-card">
-        <img src="img/doctors/doc6.jpg" alt="Dr. Kamran Aziz">
-        <h3>Dr. Kamran Aziz</h3>
+        <img src="kashif 2.jpeg" alt="Dr. Kashif kamran">
+        <h3>Dr. Kashif kamran</h3>
         <p>MBBS, FCPS (Orthopedics)</p>
         <p class="dept">Orthopedics</p>
         <a href="#" class="btn-appoint">Book Appointment</a>
@@ -150,8 +228,8 @@
 
       <!-- Doctor 7 -->
       <div class="doctor-card">
-        <img src="img/doctors/doc7.jpg" alt="Dr. Huma Tariq">
-        <h3>Dr. Huma Tariq</h3>
+        <img src="siyam.jpeg" alt="Dr. siyam Babar">
+        <h3>Dr. Siyam Babar</h3>
         <p>MBBS, FCPS (Dermatology)</p>
         <p class="dept">Skin & Laser</p>
         <a href="#" class="btn-appoint">Book Appointment</a>
@@ -159,8 +237,8 @@
 
       <!-- Doctor 8 -->
       <div class="doctor-card">
-        <img src="img/doctors/doc8.jpg" alt="Dr. Ahmed Raza">
-        <h3>Dr. Ahmed Raza</h3>
+        <img src="ubaid.jpeg" alt="Dr. ubaid Raza">
+        <h3>Dr. Ubaid Raza</h3>
         <p>MBBS, FCPS (ENT)</p>
         <p class="dept">ENT</p>
         <a href="#" class="btn-appoint">Book Appointment</a>
@@ -168,8 +246,8 @@
 
       <!-- Doctor 9 -->
       <div class="doctor-card">
-        <img src="img/doctors/doc9.jpg" alt="Dr. Mahira Sheikh">
-        <h3>Dr. Mahira Sheikh</h3>
+        <img src="qamar.jpeg" alt="Dr. Qamar">
+        <h3>Dr. Qamar Chohan</h3>
         <p>MBBS, DCH (UK)</p>
         <p class="dept">Child Therapy</p>
         <a href="#" class="btn-appoint">Book Appointment</a>
@@ -177,14 +255,81 @@
 
       <!-- Doctor 10 -->
       <div class="doctor-card">
-        <img src="img/doctors/doc10.jpg" alt="Dr. Usman Bashir">
-        <h3>Dr. Usman Bashir</h3>
+        <img src="subhan.jpeg" alt="Dr. Subhan Nasir">
+        <h3>Dr. Subhan Nasir</h3>
         <p>MBBS, FCPS (Cardiac Surgery)</p>
         <p class="dept">Cath Lab</p>
         <a href="#" class="btn-appoint">Book Appointment</a>
       </div>
 
     </div>
+    <!-- ▸ Appointment Modal -->
+  <div id="appointment-modal" class="modal">
+    <div class="modal-box">
+      <button class="close-btn" aria-label="Close Modal">&times;</button>
+      <h2>Book an Appointment</h2>
+      <p class="doc-name">with <span id="doctor-name">Doctor Name</span></p>
+
+      <form id="appoint-form">
+        <label>
+          Full Name
+          <input type="text" name="patient" placeholder="Enter your name" required>
+        </label>
+        <label>
+          Phone Number
+          <input type="tel" name="phone" placeholder="+92XXXXXXXXXX" required pattern="^\+?\d{10,15}$">
+        </label>
+        <label>
+          Preferred Date
+          <input type="date" name="date" required>
+        </label>
+        <label>
+          Preferred Time
+          <input type="time" name="time" required>
+        </label>
+        <input type="hidden" name="doctor" id="doctor-field">
+        <button type="submit" class="btn">Confirm Appointment</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ▸ Script -->
+  <script>
+    document.querySelectorAll(".btn-appoint").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const card = btn.closest(".doctor-card");
+        const docName = card.querySelector("h3")?.textContent || "Doctor";
+        document.getElementById("doctor-name").textContent = docName;
+        document.getElementById("doctor-field").value = docName;
+        document.getElementById("appointment-modal").classList.add("show");
+      });
+    });
+
+    const closeModal = () => {
+      document.getElementById("appointment-modal").classList.remove("show");
+      document.getElementById("appoint-form").reset();
+    };
+
+    document.querySelector(".close-btn").onclick = closeModal;
+    document.getElementById("appointment-modal").onclick = (e) => {
+      if (e.target.id === "appointment-modal") closeModal();
+    };
+
+    document.getElementById("appoint-form").onsubmit = (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.patient.value.trim();
+      const phone = form.phone.value.trim();
+      const date = form.date.value;
+      const time = form.time.value;
+      if (!name || !phone || !date || !time) {
+        alert("Please fill all fields.");
+        return;
+      }
+      alert(`✅ Appointment booked with ${form.doctor.value} on ${date} at ${time}`);
+      closeModal();
+    };
+  </script>
   </section>
 
 </body>
